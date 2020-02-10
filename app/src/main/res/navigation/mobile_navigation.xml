@@ -6,6 +6,12 @@
     app:startDestination="@+id/navigation_home">
 
     <fragment
+        android:id="@+id/navigation_metronome"
+        android:name="me.codershangfeng.guitarlian.ui.metronome.MetronomeFragment"
+        android:label="@string/title_metronome"
+        tools:layout="@layout/fragment_metronome" />
+
+    <fragment
         android:id="@+id/navigation_home"
         android:name="me.codershangfeng.guitarlian.ui.home.HomeFragment"
         android:label="@string/title_home"
