@@ -1,12 +1,16 @@
 package me.codershangfeng.guitarlian.ui.metronome
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MetronomeViewModel : ViewModel() {
-    private val _beatsPerMinute = MutableLiveData<String>().apply {
-        value = "60"
+
+    companion object {
+        const val MAX_BEATS_PER_MINUTES = 178
+        const val DEFAULT_BEATS_PER_MINUTES = 100
+        const val MIN_BEATS_PER_MINUTES = 40
     }
-    val beatsPerMinute: LiveData<String> = _beatsPerMinute
+
+    private val _beatsPerMinute = MutableLiveData<String>(DEFAULT_BEATS_PER_MINUTES.toString())
+    val beatsPerMinute: MutableLiveData<String> = _beatsPerMinute
 }

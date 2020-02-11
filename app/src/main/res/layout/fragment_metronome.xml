@@ -12,6 +12,11 @@
         android:textAlignment="center"
         android:textSize="20sp" />
 
+    <SeekBar
+        android:id="@+id/skb_beats_per_minutes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/start_btn"
         android:textAlignment="center"
