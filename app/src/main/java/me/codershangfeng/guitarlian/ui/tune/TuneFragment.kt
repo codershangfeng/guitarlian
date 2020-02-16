@@ -1,4 +1,4 @@
-package me.codershangfeng.guitarlian.ui.home
+package me.codershangfeng.guitarlian.ui.tune
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,22 +10,31 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import me.codershangfeng.guitarlian.R
 
-class HomeFragment : Fragment() {
+class TuneFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var tuneViewModel: TuneViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
+        tuneViewModel =
+            ViewModelProvider(this).get(TuneViewModel::class.java)
+
+        val root = inflater.inflate(R.layout.fragment_tune, container, false)
+
+        bindingText(root)
+
+        
+
         return root
+    }
+
+    private fun bindingText(root: View) {
+        val textView: TextView = root.findViewById(R.id.text_home)
+        tuneViewModel.frequency.observe(this, Observer {
+            textView.text = it.toString()
+        })
     }
 }

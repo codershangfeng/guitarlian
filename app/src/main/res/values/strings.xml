@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">guitarlian</string>
     <string name="title_metronome">Metronome</string>
-    <string name="title_home">Home</string>
+    <string name="title_tune">Tune</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 </resources>

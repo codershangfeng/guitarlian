@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_metronome">
+    app:startDestination="@+id/navigation_tune">
 
     <fragment
         android:id="@+id/navigation_metronome"
@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_metronome" />
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="me.codershangfeng.guitarlian.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_tune"
+        android:name="me.codershangfeng.guitarlian.ui.tune.TuneFragment"
+        android:label="@string/title_tune"
+        tools:layout="@layout/fragment_tune" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
